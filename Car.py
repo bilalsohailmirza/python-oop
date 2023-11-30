@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Car:
 
     #this is the example of a prametarized constructor
@@ -18,20 +21,25 @@ class Car:
    # there are 2 types of functions to modify data
    # 1. Accessors -> Access and return the data (get functions)
    # 2. Mutators -> Mutate/Update the data (set Functions)
+
     def getMake(self):
         # print(self.make)
         return self.make
     
     def setMake(self, newMake):
         self.make = newMake
+
+    def getModel(self):
+        return self.model
+    
+    def setModel(self, newModel):
+        self.model = newModel
         
 
 car = Car('Honda' ,'Accord', 1500, 'Black', 5)
 
-carMake = car.getMake()
-print("The Car's make is: ", carMake)
+print(car.getModel())
 
-car.setMake('Toyota')
-carMake = car.getMake()
-print("The Car's make is: ", carMake)
+car.setModel('Civic')
 
+print(car.getModel())

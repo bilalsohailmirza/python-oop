@@ -19,6 +19,7 @@ class Car:
 
 # if __name__ == '__main__':
 car = Car('Toyota', 'Accord' ,'1500', 'Black', 5)
+new_car = Car()
 car1 = Car('Toyota', 'Corolla' ,'1500', 'Black', 5)
 car2 = Car('Toyota', 'Prius' ,'1500', 'Black', 7)
 car3 = Car('Honda', 'Civic' ,'1500', 'Black', 4)
