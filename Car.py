@@ -1,5 +1,3 @@
-from typing import Any
-
 
 class Car:
 
@@ -15,7 +13,7 @@ class Car:
         print(self.make)
         print(self.model)
         print(self.engine)
-        print(self.seating_capcity)     
+        print(self.seating_capcity)    
         print(self.color)
 
    # there are 2 types of functions to modify data
