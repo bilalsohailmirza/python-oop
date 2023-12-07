@@ -15,7 +15,7 @@ class Employee:
 
         return self.monthlySalary * 12
 
-    def give_yearly_raise(self, yearlyRaise, yearlySalary)
+    def give_yearly_raise(self, yearlyRaise, yearlySalary):
 
         raisedSalary = yearlySalary * 12 * yearlyRaise
         return raisedSalary
