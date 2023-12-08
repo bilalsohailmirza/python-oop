@@ -1,0 +1,21 @@
+
+------------- FEATURES ------------
+
+1st class will be of Time Table
+
+* there are 5 grades/years
+* there are 5 hours in a day
+* there are 5 days in a week
+-- let's assume we have 30 rooms in the school
+-- we'll keep the room names simple as R-1, R-2
+
+2nd class will be of Teachers
+
+* view the time table
+* can edit the room no.
+
+
+3rd class will be of students
+
+* view the time table
+
