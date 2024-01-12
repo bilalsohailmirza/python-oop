@@ -9,7 +9,7 @@ class Admin:
 
         data_tuple = (username, password)
 
-        conn = sqlite3.connect('School.db')
+        conn = sqlite3.connect('School3.db')
         cursor = sqlite3.Cursor(conn)
 
         cursor.execute("""
@@ -27,7 +27,7 @@ class Admin:
 
     def login(self, username, password):
 
-        conn = sqlite3.connect('School.db')
+        conn = sqlite3.connect('School3.db')
         cursor = sqlite3.Cursor(conn)
 
         cursor.execute("""

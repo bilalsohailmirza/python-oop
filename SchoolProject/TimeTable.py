@@ -3,24 +3,42 @@ import sqlite3
 class TimeTable:
 
     def __init__(self):
-        self.table = [[]]
+        self.table = []
 
 
     def loadTimeTable(self):
-
-        for i in range(5):
-            for j in range(5):
-
-                print(self.table[])
-                # result = whatever you read from database
-                table[2][3] = result 
         
-    def viewTimeTable():
+        conn = sqlite3.connect('School3.db')
+        cursor = sqlite3.Cursor(conn)
 
-        for i in range(5):
-            for j in range(5):
+        cursor.execute("""
+                    SELECT *
+                    FROM TimeTable
+                    """
+                    )
+        
+        rows = cursor.fetchall()
+        return rows
+        
+                
+    def viewTimeTableByDays(self, day):
+         
+        conn = sqlite3.connect('School3.db')
+        cursor = sqlite3.Cursor(conn)
+        day = day + '_'
+        cursor.execute("""SELECT * FROM TimeTable WHERE Day LIKE ?;""", (day,))
+        
+        rows = cursor.fetchall()
 
-                print(self.table[])
+        return rows
+
+    def viewTimeTable(self):
+
+        rows = self.loadTimeTable()
+
+        for i in range(len(rows)):
+            rows[i] = list(rows[i])
+            print(rows[i])
 
 class Class:
 
@@ -41,5 +59,7 @@ class Class:
 
 if __name__ == '__main__':
 
-    class1 = Class('Chemistry', 'MC', 'A5', '10S1')
-    class1.display_class()
+    time_table = TimeTable()
+    # time_table.loadTimeTable()
+    # time_table.viewTimeTable()
+    
