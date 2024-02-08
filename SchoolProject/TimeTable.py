@@ -31,6 +31,15 @@ class TimeTable:
         rows = cursor.fetchall()
 
         return rows
+    
+    def viewTimeTableBySubject(self, subject):
+        conn = sqlite3.connect('School3.db')
+        cursor = sqlite3.Cursor(conn)
+        subject = subject + '%'
+        cursor.execute("""SELECT * FROM TimeTable WHERE Subject LIKE ?""", (subject,))
+
+        rows = cursor.fetchall()
+        return rows
 
     def viewTimeTable(self):
 
@@ -40,20 +49,20 @@ class TimeTable:
             rows[i] = list(rows[i])
             print(rows[i])
 
-class Class:
+# class Class:
 
-    def __init__(self, subject, instructor, room_no, group_no):
+#     def __init__(self, subject, instructor, room_no, group_no):
 
-        self.subject = subject
-        self.instructor = instructor
-        self.room_no = room_no
-        self.group_no = group_no
+#         self.subject = subject
+#         self.instructor = instructor
+#         self.room_no = room_no
+#         self.group_no = group_no
 
-    def display_class(self):
-        print("Subject:  ", self.subject)
-        print("Instructor:  ", self.instructor)
-        print("Room No:  ", self.room_no)
-        print("Group No:  ", self.group_no)
+#     def display_class(self):
+#         print("Subject:  ", self.subject)
+#         print("Instructor:  ", self.instructor)
+#         print("Room No:  ", self.room_no)
+#         print("Group No:  ", self.group_no)
 
 
 
