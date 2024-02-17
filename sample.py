@@ -38,3 +38,5 @@ if __name__ == '__main__':
 # DDL -> Data Definition Language
 # DML -> Data Manipulation Language
 # DCL -> Data Control Language 
+
+
