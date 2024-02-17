@@ -3,7 +3,7 @@ import time, sqlite3, MainModules
 
 class Quiz:
 
-# note: for loop will be needed to determine whether or not quizid is taken, as quiz id determines the quiz the questions belong to
+# note: when making a new quiz, a for loop will be needed to determine whether or not quizid is taken, as quiz id determines the quiz the questions belong to
 # for example, if quizid = 1 in the database then every row with that condition will be apart of 1 individual quiz
 # since the program will not know what quizid has been taken, it will go through a for loop and will individually check through each number until it finds an unused value (e.g if value is found, then value += 1, repeat)
 
