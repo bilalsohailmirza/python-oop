@@ -3,8 +3,10 @@ import time, sqlite3, MainModules
 
 class Quiz:
 
-# note: for loop will be needed to determine whether or not quizid is taken
-# if taken, do x += 1 until quiz id is free, put it back into query
+# note: for loop will be needed to determine whether or not quizid is taken, as quiz id determines the quiz the questions belong to
+# for example, if quizid = 1 in the database then every row with that condition will be apart of 1 individual quiz
+# since the program will not know what quizid has been taken, it will go through a for loop and will individually check through each number until it finds an unused value (e.g if value is found, then value += 1, repeat)
+
 
     def quizTypeSegregatorModule(chooseQuestionLengthOption, chooseQuizTypeOption):
         MainModules.loadingModule()
@@ -44,6 +46,8 @@ class Quiz:
             
             Quiz.createAUserInputQuizGUI()
             return Quiz.userInputQuizModule(chooseQuestionLengthOption)
+
+# the code lines 52 - 56 are placeholders, will be changed later
 
         # userPass = username, password
         # conn = sqlite3.connect('QuizGameDataBase.db')
